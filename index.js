@@ -39,13 +39,25 @@ const title=document.querySelector(".buttons p");
 
 
 function loaddata(){
-    song.innerHTML=`
-     <source src="${localStorage.getItem("data")}">
-    `
-    heading.innerHTML=localStorage.getItem("name");
-    title.innerHTML=localStorage.getItem("artist");
-    img.setAttribute("src",localStorage.getItem("image"));
-
+    if(localStorage.length==0){
+        song.innerHTML=
+        `
+        <source src="${songs[0].url}">
+       `
+  
+        heading.innerHTML=songs[0].songName;
+        img.setAttribute("src",songs[0].imgUrl);
+        title.innerHTML=songs[0].artistName;
+    }
+    else{
+        song.innerHTML=`
+        <source src="${localStorage.getItem("data")}">
+       `
+       heading.innerHTML=localStorage.getItem("name");
+       title.innerHTML=localStorage.getItem("artist");
+       img.setAttribute("src",localStorage.getItem("image"));
+   
+    }
 
 }
 loaddata();
