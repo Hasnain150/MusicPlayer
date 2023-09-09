@@ -10,7 +10,7 @@ body{
 }
 .app
 {
-    width: 100%;
+    width: 90%;
     max-width: 700px;
     background-color: #F1F0E8;
     position: absolute;
@@ -88,7 +88,7 @@ nav{
 
 #rangeS{
     -webkit-appearance: none;
-    width: 600px;
+    width: 100%;
     background-color: #57375D;
     border-radius: 10px;
     height: 8px;
@@ -141,6 +141,16 @@ nav{
    font-weight: bold;
 
 }
+#logo{
+    border: 1px solid black;
+    box-shadow: 3px 3px 8px 2px #57375D;
+    padding: 18px;
+    border-radius: 15px;
+    font-size: 20px;
+    font-family:"Roboto";
+
+
+}
 .songsS p img{
     height: 20px;
    margin-right: 10px;
@@ -156,4 +166,13 @@ nav{
 }
 .visibilityHidden{
     visibility: hidden;
+}
+@media screen and (max-width:450px) {
+    .btns div{
+       padding: 16px;
+    }
+    #logo{
+        font-size: 15px;
+    }
+    
 }

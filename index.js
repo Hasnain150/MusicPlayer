@@ -125,3 +125,54 @@ btn.addEventListener("click",()=>{
     }
 })
 
+const nextbutton=document.querySelector("#nextBtn");
+function nextSong(){
+    let x=heading.innerText;
+    for(let i=0;i<songs.length;i++){
+        if(i==songs.length-1){
+            localStorage.setItem("data",songs[0].url);
+            localStorage.setItem("name",songs[0].songName);
+            localStorage.setItem("artist",songs[0].artistName);
+            localStorage.setItem("image",songs[0].imgUrl);
+            location.reload();
+        }else {
+            if(songs[i].songName===x){
+                localStorage.setItem("data",songs[i+1].url);
+                localStorage.setItem("name",songs[i+1].songName);
+                localStorage.setItem("artist",songs[i+1].artistName);
+                localStorage.setItem("image",songs[i+1].imgUrl);
+                location.reload();
+                break;
+            }
+        }
+       
+    }
+    
+}
+nextbutton.addEventListener("click",nextSong);
+function previousSong(){
+    let x=heading.innerText;
+    let len=songs.length-1;
+    for(let i=0;i<songs.length;i++){
+        if(i==0){
+            localStorage.setItem("data",songs[len].url);
+            localStorage.setItem("name",songs[len].songName);
+            localStorage.setItem("artist",songs[len].artistName);
+            localStorage.setItem("image",songs[len].imgUrl);
+            location.reload();
+        }else {
+            if(songs[i].songName===x){
+                localStorage.setItem("data",songs[i-1].url);
+                localStorage.setItem("name",songs[i-1].songName);
+                localStorage.setItem("artist",songs[i-1].artistName);
+                localStorage.setItem("image",songs[i-1].imgUrl);
+                location.reload();
+                break;
+            }
+        }
+       
+    }
+    
+}
+const prevButton=document.querySelector("#prevBtn");
+prevButton.addEventListener('click',previousSong);
