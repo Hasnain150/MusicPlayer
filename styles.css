@@ -1,0 +1,159 @@
+*{
+    margin: 0;padding: 0;box-sizing: border-box;font-family: "Poppins",cursive;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color:#57375D ;
+
+
+}
+.app
+{
+    width: 100%;
+    max-width: 700px;
+    background-color: #F1F0E8;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navh{
+    border-radius: 50%;
+    border: none;
+    padding: 20px;
+    box-shadow: 3px 3px 8px 2px #57375D;
+    width: 60px;
+
+}
+.img
+{
+    padding: 20px;
+    margin-top: 30px;
+}.img img{
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 8px solid #57375D;
+    transform: rotate(0deg);
+    /* animation: rotate 1s infinite ease-in-out forwards; */
+}
+@keyframes rotate {
+    10%
+    {
+        transform: rotate(0deg);
+        
+    }
+    20%{
+        transform: rotate(45deg);
+        
+    }
+    30%{
+        transform: rotate(90deg);
+
+    }
+    40%{
+        transform: rotate(135deg);
+
+    }
+    50%{
+        transform: rotate(180deg);
+
+    }
+    60%{
+        transform: rotate(225deg);
+
+    }
+    70%{
+        transform: rotate(270deg);
+        
+    }
+    80%{
+        transform: rotate(315deg);
+
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+    
+}
+
+#rangeS{
+    -webkit-appearance: none;
+    width: 600px;
+    background-color: #57375D;
+    border-radius: 10px;
+    height: 8px;
+    margin-top: 20px;
+
+}
+#rangeS::-webkit-slider-thumb{
+  height: 20px;
+  width: 20px;
+  -webkit-appearance: none;
+  background-color: red;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10 red;
+
+
+}
+.btns div{
+  width: fit-content;
+  padding: 30px;
+  border-radius: 50%;
+  margin: 20px;
+  color: #57375D;
+  box-shadow: 3px 3px 8px 2px #57375D;
+
+
+
+}
+.btns{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.btns div:nth-child(2){
+    color: white;
+    background-color: #57375D;
+    transform: scale(1.5);
+}
+
+.songsS{
+    text-align: left;
+    position: absolute;
+    visibility: hidden;
+
+}
+.songsS p{
+   padding:10px;
+   font-size: 20px;
+   font-weight: bold;
+
+}
+.songsS p img{
+    height: 20px;
+   margin-right: 10px;
+}
+.songsS p:hover{
+    border: 1px solid #57375D;
+}
+.songsS p:nth-child(1){
+    margin-top: 20px;
+}
+.visibilityInherit{
+    visibility: inherit;
+}
+.visibilityHidden{
+    visibility: hidden;
+}
